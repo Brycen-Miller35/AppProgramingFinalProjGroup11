@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<gz version='1.0'>
+  <executable name='gazebo-demo'>
+    <command>gz sim Gazebo_Demo.sdf</command>
+  </executable>
+  
+  <executable name='ball'>
+    <command>gz sim ball.sdf</command>
+  </executable>
+
+  <!--
+  <executable name='lidar_node'>
+    <command>./build/lidar_node</command>
+  </executable>
+  -->
+</gz>
+

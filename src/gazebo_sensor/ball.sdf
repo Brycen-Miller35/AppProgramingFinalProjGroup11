@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="pushable_ball">
+    <!-- Make the ball movable -->
+    <static>false</static>
+
+    <!-- Define the ball's pose in the world -->
+    <pose>2 1 1 0 0 0</pose>
+
+    <link name="ball_link">
+
+      <!-- Visual appearance -->
+      <visual name="ball_visual">
+        <geometry>
+          <sphere>
+            <radius>.5</radius> 
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.1 0.3 0.8 1</ambient>
+          <diffuse>0.1 0.4 0.9 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+
+      <!-- Collision properties -->
+      <collision name="ball_collision">
+        <geometry>
+          <sphere>
+            <radius>.5</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <contact>
+            <collide_without_contact>false</collide_without_contact>
+            <collide_bitmask>1</collide_bitmask>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.6</mu>
+              <mu2>0.6</mu2>
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0.4</restitution_coefficient>
+            <threshold>1.0</threshold>
+          </bounce>
+        </surface>
+      </collision>
+
+      <!-- Inertial properties (for realistic motion) -->
+      <inertial>
+        <mass>0.25</mass> <!-- 250 g -->
+        <inertia>
+          <ixx>0.0005</ixx>
+          <iyy>0.0005</iyy>
+          <izz>0.0005</izz>
+        </inertia>
+      </inertial>
+
+    </link>
+  </model>
+</sdf>

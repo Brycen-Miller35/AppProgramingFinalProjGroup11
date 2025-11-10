@@ -1,0 +1,3 @@
+/home/sid-admin/template_ws/src/gazebo_sensor/build/CMakeFiles/lidar_node.dir
+/home/sid-admin/template_ws/src/gazebo_sensor/build/CMakeFiles/edit_cache.dir
+/home/sid-admin/template_ws/src/gazebo_sensor/build/CMakeFiles/rebuild_cache.dir
